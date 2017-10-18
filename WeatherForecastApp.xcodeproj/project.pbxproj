@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		EA1B03551F97D6F4006B4AC3 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA6F70C71F97D32300086606 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA1B03561F97D6F4006B4AC3 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA6F70C51F97D31B00086606 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA1B035A1F97D8F6006B4AC3 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B03571F97D8F6006B4AC3 /* LocationService.swift */; };
+		EA1B035B1F97D8F6006B4AC3 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B03581F97D8F6006B4AC3 /* CLLocationManager+Rx.swift */; };
+		EA1B035C1F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B03591F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift */; };
 		EA6F70C61F97D31B00086606 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6F70C51F97D31B00086606 /* RxSwift.framework */; };
 		EA6F70C81F97D32300086606 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6F70C71F97D32300086606 /* RxCocoa.framework */; };
 		EA798F7F1F97C93C0062536A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA798F7E1F97C93B0062536A /* AppDelegate.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA1B03571F97D8F6006B4AC3 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		EA1B03581F97D8F6006B4AC3 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		EA1B03591F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		EA6F70C51F97D31B00086606 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		EA6F70C71F97D32300086606 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		EA798F7B1F97C93B0062536A /* WeatherForecastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +98,9 @@
 				EA798F851F97C93C0062536A /* Assets.xcassets */,
 				EA798F871F97C93C0062536A /* LaunchScreen.storyboard */,
 				EA798F8A1F97C93C0062536A /* Info.plist */,
+				EA1B03581F97D8F6006B4AC3 /* CLLocationManager+Rx.swift */,
+				EA1B03571F97D8F6006B4AC3 /* LocationService.swift */,
+				EA1B03591F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift */,
 			);
 			path = WeatherForecastApp;
 			sourceTree = "<group>";
@@ -170,6 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA798F811F97C93C0062536A /* ViewController.swift in Sources */,
+				EA1B035B1F97D8F6006B4AC3 /* CLLocationManager+Rx.swift in Sources */,
+				EA1B035A1F97D8F6006B4AC3 /* LocationService.swift in Sources */,
+				EA1B035C1F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				EA798F7F1F97C93C0062536A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
