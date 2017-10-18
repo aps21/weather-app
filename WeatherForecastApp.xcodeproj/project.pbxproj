@@ -13,6 +13,14 @@
 		EA1B035B1F97D8F6006B4AC3 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B03581F97D8F6006B4AC3 /* CLLocationManager+Rx.swift */; };
 		EA1B035C1F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B03591F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift */; };
 		EA1B035E1F97E0D0006B4AC3 /* GeoCoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B035D1F97E0D0006B4AC3 /* GeoCoderService.swift */; };
+		EA1B03601F97F28E006B4AC3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B035F1F97F28E006B4AC3 /* Weather.swift */; };
+		EA1B03621F97F2B6006B4AC3 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B03611F97F2B6006B4AC3 /* OpenWeatherMapService.swift */; };
+		EA1B03641F97F607006B4AC3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1B03631F97F607006B4AC3 /* Alamofire.framework */; };
+		EA1B03661F97F60E006B4AC3 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1B03651F97F60D006B4AC3 /* AlamofireObjectMapper.framework */; };
+		EA1B03681F97F617006B4AC3 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1B03671F97F617006B4AC3 /* ObjectMapper.framework */; };
+		EA1B03691F97F62F006B4AC3 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA1B03671F97F617006B4AC3 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA1B036A1F97F62F006B4AC3 /* AlamofireObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA1B03651F97F60D006B4AC3 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA1B036B1F97F62F006B4AC3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA1B03631F97F607006B4AC3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA6F70C61F97D31B00086606 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6F70C51F97D31B00086606 /* RxSwift.framework */; };
 		EA6F70C81F97D32300086606 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6F70C71F97D32300086606 /* RxCocoa.framework */; };
 		EA798F7F1F97C93C0062536A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA798F7E1F97C93B0062536A /* AppDelegate.swift */; };
@@ -29,6 +37,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EA1B03691F97F62F006B4AC3 /* ObjectMapper.framework in CopyFiles */,
+				EA1B036A1F97F62F006B4AC3 /* AlamofireObjectMapper.framework in CopyFiles */,
+				EA1B036B1F97F62F006B4AC3 /* Alamofire.framework in CopyFiles */,
 				EA1B03551F97D6F4006B4AC3 /* RxCocoa.framework in CopyFiles */,
 				EA1B03561F97D6F4006B4AC3 /* RxSwift.framework in CopyFiles */,
 			);
@@ -41,6 +52,11 @@
 		EA1B03581F97D8F6006B4AC3 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
 		EA1B03591F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		EA1B035D1F97E0D0006B4AC3 /* GeoCoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoderService.swift; sourceTree = "<group>"; };
+		EA1B035F1F97F28E006B4AC3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		EA1B03611F97F2B6006B4AC3 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
+		EA1B03631F97F607006B4AC3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		EA1B03651F97F60D006B4AC3 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		EA1B03671F97F617006B4AC3 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		EA6F70C51F97D31B00086606 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		EA6F70C71F97D32300086606 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		EA798F7B1F97C93B0062536A /* WeatherForecastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +75,9 @@
 			files = (
 				EA6F70C61F97D31B00086606 /* RxSwift.framework in Frameworks */,
 				EA6F70C81F97D32300086606 /* RxCocoa.framework in Frameworks */,
+				EA1B03661F97F60E006B4AC3 /* AlamofireObjectMapper.framework in Frameworks */,
+				EA1B03681F97F617006B4AC3 /* ObjectMapper.framework in Frameworks */,
+				EA1B03641F97F607006B4AC3 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +87,9 @@
 		EA6F70C41F97D31B00086606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA1B03671F97F617006B4AC3 /* ObjectMapper.framework */,
+				EA1B03651F97F60D006B4AC3 /* AlamofireObjectMapper.framework */,
+				EA1B03631F97F607006B4AC3 /* Alamofire.framework */,
 				EA6F70C71F97D32300086606 /* RxCocoa.framework */,
 				EA6F70C51F97D31B00086606 /* RxSwift.framework */,
 			);
@@ -94,12 +116,14 @@
 		EA798F7D1F97C93B0062536A /* WeatherForecastApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA1B035F1F97F28E006B4AC3 /* Weather.swift */,
 				EA798F7E1F97C93B0062536A /* AppDelegate.swift */,
 				EA798F801F97C93C0062536A /* ViewController.swift */,
 				EA798F821F97C93C0062536A /* Main.storyboard */,
 				EA798F851F97C93C0062536A /* Assets.xcassets */,
 				EA798F871F97C93C0062536A /* LaunchScreen.storyboard */,
 				EA798F8A1F97C93C0062536A /* Info.plist */,
+				EA1B03611F97F2B6006B4AC3 /* OpenWeatherMapService.swift */,
 				EA1B03581F97D8F6006B4AC3 /* CLLocationManager+Rx.swift */,
 				EA1B03571F97D8F6006B4AC3 /* LocationService.swift */,
 				EA1B03591F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift */,
@@ -187,6 +211,8 @@
 				EA1B035A1F97D8F6006B4AC3 /* LocationService.swift in Sources */,
 				EA1B035C1F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				EA798F7F1F97C93C0062536A /* AppDelegate.swift in Sources */,
+				EA1B03601F97F28E006B4AC3 /* Weather.swift in Sources */,
+				EA1B03621F97F2B6006B4AC3 /* OpenWeatherMapService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

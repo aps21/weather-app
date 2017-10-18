@@ -22,14 +22,22 @@ class ViewController: UIViewController {
       .subscribe(onNext: { authorized in print(authorized) })
       .disposed(by: disposeBag)
 
-    LocationService.instance.location.asObservable()
+    let location = LocationService.instance.location.asObservable().share()
+    location
       .subscribe(onNext: { location in print(location) })
       .disposed(by: disposeBag)
 
     let geoCoderService = GeoCoderService()
-    LocationService.instance.location.asObservable()
+    let city = location
       .flatMapLatest { geoCoderService.getCityName($0) }
+      .share()
+    city
       .subscribe(onNext: { city in print(city) })
+      .disposed(by: disposeBag)
+    
+    city
+      .flatMapLatest { OpenWeatherMapService().retriveWeatherInfo($0) }
+      .subscribe(onNext: { weather in print(weather.toJSON()) })
       .disposed(by: disposeBag)
   }
 
