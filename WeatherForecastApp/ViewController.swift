@@ -1,44 +1,51 @@
 //
 //  ViewController.swift
-//  WeatherForecastApp
+//  WeatherForecast
 //
-//  Created by Tatyana Tepaeva on 18.10.17.
+//  Created by Tatyana Tepaeva on 12.10.17.
 //  Copyright © 2017 Tatyana Tepaeva. All rights reserved.
 //
 
 import UIKit
 import RxSwift
+import RxCocoa
+import CoreLocation
+import Kingfisher
 
 class ViewController: UIViewController {
+  var viewModel: ViewModel!
   let disposeBag = DisposeBag()
+
+  @IBOutlet weak var degreesLabel: UILabel!
+  @IBOutlet weak var cityNameLabel: UILabel!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var imageView: UIImageView!
+  var locationService = LocationService.instance
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    setup()
+  }
 
-    print("Start!")
-
-    LocationService.instance.authorized.asObservable()
-      .subscribe(onNext: { authorized in print(authorized) })
-      .disposed(by: disposeBag)
-
-    let location = LocationService.instance.location.asObservable().share()
-    location
-      .subscribe(onNext: { location in print(location) })
-      .disposed(by: disposeBag)
-
-    let geoCoderService = GeoCoderService()
-    let city = location
-      .flatMapLatest { geoCoderService.getCityName($0) }
-      .share()
-    city
-      .subscribe(onNext: { city in print(city) })
-      .disposed(by: disposeBag)
-    
-    city
-      .flatMapLatest { OpenWeatherMapService().retriveWeatherInfo($0) }
-      .subscribe(onNext: { weather in print(weather.toJSON()) })
-      .disposed(by: disposeBag)
+  func setup() {
+    viewModel = ViewModel(location: locationService.location)
+    self.viewModel.cityName
+      .bind(to: self.cityNameLabel.rx.text)
+      .disposed(by: self.disposeBag)
+    self.viewModel.degreesValue
+      .bind(to: self.degreesLabel.rx.text)
+      .disposed(by: self.disposeBag)
+    self.viewModel.loading.asObservable()
+      .bind(to: self.activityIndicator.rx.isAnimating)
+      .disposed(by: self.disposeBag)
+    self.viewModel.imageURL
+      .subscribe { observableUrl in
+        let url = URL(string: observableUrl.element!)
+        self.imageView.kf.setImage(with: url)
+        return
+      }
+      .disposed(by: self.disposeBag)
   }
 
   override func didReceiveMemoryWarning() {

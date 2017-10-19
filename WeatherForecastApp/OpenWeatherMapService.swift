@@ -18,7 +18,7 @@ struct OpenWeatherMapService {
     static let URLWeatherPostfix = "&units=metric&appid=af3924e2f36400185c4e185703cddcc2"
     static let URLWeatherPart = "data/2.5/weather?q="
   }
-  
+
   public func retriveWeatherInfo (_ cityName: String) -> Observable<Weather> {
     return Observable.create { observer in
       let URL = Constants.URLPrefix + Constants.URLWeatherPart +
