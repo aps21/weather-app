@@ -29,13 +29,27 @@ class ViewController: UIViewController {
   }
 
   func setup() {
+    let progressViewController = (storyboard?.instantiateViewController(withIdentifier: "progressScene"))!
     viewModel = ViewModel(location: locationService.location)
+
     self.viewModel.cityName
       .bind(to: self.cityNameLabel.rx.text)
       .disposed(by: self.disposeBag)
     self.viewModel.degreesValue
       .bind(to: self.degreesLabel.rx.text)
       .disposed(by: self.disposeBag)
+    self.viewModel.dataIsNil.asObservable()
+      .subscribe(onNext: { next in
+        if next {
+          self.addChildViewController(progressViewController)
+          self.view.addSubview(progressViewController.view)
+          progressViewController.didMove(toParentViewController: self)
+        } else {
+          progressViewController.willMove(toParentViewController: nil)
+          progressViewController.view.removeFromSuperview()
+          progressViewController.removeFromParentViewController()
+        }
+      }).disposed(by: self.disposeBag)
     self.viewModel.loading.asObservable()
       .bind(to: self.activityIndicator.rx.isAnimating)
       .disposed(by: self.disposeBag)

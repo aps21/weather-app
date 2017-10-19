@@ -75,5 +75,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Progress View Controller-->
+        <scene sceneID="7sP-ve-rSC">
+            <objects>
+                <viewController storyboardIdentifier="progressScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GNX-0v-Ee0" customClass="ProgressViewController" customModule="WeatherForecastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="WQc-em-8pP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YfZ-Aw-IBB">
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YfZ-Aw-IBB" firstAttribute="centerY" secondItem="gA7-5B-2H2" secondAttribute="centerY" id="Ue8-Av-NU1"/>
+                            <constraint firstItem="YfZ-Aw-IBB" firstAttribute="centerX" secondItem="gA7-5B-2H2" secondAttribute="centerX" id="uhw-7G-jqR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gA7-5B-2H2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IE5-vu-sVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="37"/>
+        </scene>
     </scenes>
 </document>

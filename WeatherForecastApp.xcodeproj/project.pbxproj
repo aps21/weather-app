@@ -31,6 +31,7 @@
 		EAD0BAEA1F9889F10053CE93 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0BAE91F9889F10053CE93 /* ViewModel.swift */; };
 		EAD0BAEC1F988DDB0053CE93 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0BAEB1F988DDB0053CE93 /* Kingfisher.framework */; };
 		EAD0BAED1F988DEC0053CE93 /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD0BAEB1F988DDB0053CE93 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EAD0BAEF1F9893CF0053CE93 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0BAEE1F9893CF0053CE93 /* ProgressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +73,7 @@
 		EA798F8A1F97C93C0062536A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAD0BAE91F9889F10053CE93 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		EAD0BAEB1F988DDB0053CE93 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		EAD0BAEE1F9893CF0053CE93 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +126,10 @@
 		EA798F7D1F97C93B0062536A /* WeatherForecastApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA798F7E1F97C93B0062536A /* AppDelegate.swift */,
 				EA1B035F1F97F28E006B4AC3 /* Weather.swift */,
 				EAD0BAE91F9889F10053CE93 /* ViewModel.swift */,
-				EA798F7E1F97C93B0062536A /* AppDelegate.swift */,
+				EAD0BAEE1F9893CF0053CE93 /* ProgressViewController.swift */,
 				EA798F801F97C93C0062536A /* ViewController.swift */,
 				EA798F821F97C93C0062536A /* Main.storyboard */,
 				EA798F851F97C93C0062536A /* Assets.xcassets */,
@@ -219,6 +222,7 @@
 				EA798F811F97C93C0062536A /* ViewController.swift in Sources */,
 				EA1B035B1F97D8F6006B4AC3 /* CLLocationManager+Rx.swift in Sources */,
 				EA1B035A1F97D8F6006B4AC3 /* LocationService.swift in Sources */,
+				EAD0BAEF1F9893CF0053CE93 /* ProgressViewController.swift in Sources */,
 				EA1B035C1F97D8F6006B4AC3 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				EA798F7F1F97C93C0062536A /* AppDelegate.swift in Sources */,
 				EA1B03601F97F28E006B4AC3 /* Weather.swift in Sources */,
